@@ -1,15 +1,14 @@
-
 <img src="https://cdn-uploads.huggingface.co/production/uploads/5df8bb21da6d0311fd3d540f/cZoZdwQOPdQsnQmDXHcSn.png" alt="llamantino3_anita" border="0" width="800px">
 <hr>
 <!--<img src="https://i.ibb.co/6mHSRm3/llamantino53.jpg" width="200"/>-->
 
+
+
 ## Model Details
 *Last Update: 29/04/2024*<br>
----
-license: llama3
-license_name: llama3
-license_link: LICENSE
----
+
+
+
 **LLaMAntino-3-ANITA-8B-sft-ORPO** is a model of the [**LLaMAntino**](https://huggingface.co/swap-uniba) - *Large Language Models family*.
 The model is an instruction-tuned version of [**Meta-Llama-3-8b-instruct**](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) (a fine-tuned **LLaMA 3 model**).
 This model version aims to be the **Multilingual Base-Model** 🏁 to further fine-tune in the Italian environment. 
