@@ -91,10 +91,12 @@ For direct use with `transformers`, you can easily get started with the followin
   )
   tokenizer = AutoTokenizer.from_pretrained(base_model)
 
+  sys = "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA " \
+      "(Advanced Natural-based interaction for the ITAlian language)." \
+      " Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo."
+  
   messages = [
-      {"role": "system", "content": {"role": "system", "content": "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA \
-      (Advanced Natural-based interaction for the ITAlian language). \
-      Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo. "},
+      {"role": "system", "content": sys},
       {"role": "user", "content": "Chi è Carlo Magno?"}
   ]
 
@@ -150,10 +152,12 @@ For direct use with `transformers`, you can easily get started with the followin
   )
   tokenizer = AutoTokenizer.from_pretrained(base_model)
 
+  sys = "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA " \
+        "(Advanced Natural-based interaction for the ITAlian language)." \
+        " Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo."
+    
   messages = [
-     {"role": "system", "content": {"role": "system", "content": "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA \
-     (Advanced Natural-based interaction for the ITAlian language). \
-     Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo. "},
+      {"role": "system", "content": sys},
       {"role": "user", "content": "Chi è Carlo Magno?"}
   ]
 
@@ -212,10 +216,12 @@ For direct use with `unsloth`, you can easily get started with the following ste
 
 - Right now, you can start using the model directly.
   ```python
+  sys = "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA " \
+        "(Advanced Natural-based interaction for the ITAlian language)." \
+        " Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo."
+    
   messages = [
-      {"role": "system", "content": {"role": "system", "content": "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA \
-     (Advanced Natural-based interaction for the ITAlian language). \
-     Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo. "},
+      {"role": "system", "content": sys},
       {"role": "user", "content": "Chi è Carlo Magno?"}
   ]
   prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
