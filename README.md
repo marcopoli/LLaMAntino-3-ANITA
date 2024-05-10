@@ -95,7 +95,7 @@ For direct use with `transformers`, you can easily get started with the followin
       {"role": "system", "content": {"role": "system", "content": "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA \
       (Advanced Natural-based interaction for the ITAlian language). \
       Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo. "},
-      {"role": "user", "content": "Why is the sky blue?"}
+      {"role": "user", "content": "Chi è Carlo Magno?"}
   ]
 
   #Method 1
@@ -154,7 +154,7 @@ For direct use with `transformers`, you can easily get started with the followin
      {"role": "system", "content": {"role": "system", "content": "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA \
      (Advanced Natural-based interaction for the ITAlian language). \
      Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo. "},
-      {"role": "user", "content": "Why is the sky blue?"}
+      {"role": "user", "content": "Chi è Carlo Magno?"}
   ]
 
   #Method 1
@@ -216,7 +216,7 @@ For direct use with `unsloth`, you can easily get started with the following ste
       {"role": "system", "content": {"role": "system", "content": "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA \
      (Advanced Natural-based interaction for the ITAlian language). \
      Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo. "},
-      {"role": "user", "content": "Why is the sky blue?"}
+      {"role": "user", "content": "Chi è Carlo Magno?"}
   ]
   prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
   inputs = tokenizer(prompt, return_tensors="pt", add_special_tokens=False)
