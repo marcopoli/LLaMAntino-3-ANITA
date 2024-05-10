@@ -20,16 +20,19 @@ wants to provide Italian NLP researchers with an improved model the for Italian 
 <hr>
 
 ## Repo Structure
-- **inference/inference_anita.ipynb** Python Notebook for testing the model inference.
-- **evaluation/job_evaluation.slurm** SLURM script to evaluate the model using the [**EleutherAI/lm-evaluation-harness**](https://github.com/EleutherAI/lm-evaluation-harness) framework (multiple-GPUs).
+- **inference/inference_anita.ipynb** Python Notebook for testing the model inference.<br><br>
+  
+- **evaluation/job_evaluation.slurm** SLURM script to evaluate the model using [**EleutherAI/lm-evaluation-harness**](https://github.com/EleutherAI/lm-evaluation-harness) framework.
 - **model_adaptation/finetune_llama3.py** Python script fine-tuning the model on a specific task using [**Unsloth library**](https://unsloth.ai).
 - **model_adaptation/dpo_llama3.py** Python script to optimize the model over user preferences.
-- **model_adaptation/job_example.slurm** SLURM script to run the model_adaption process over an HPC architecture (multiple-GPUs).
+- **model_adaptation/job_example.slurm** SLURM script to run the model_adaption process over an HPC architecture (multiple-GPUs).<br><br>
+
 - **use_examples/LLama_3_for_Sentiment_Analysis.ipynb** Python Notebook for Sentiment Analysis task.
 - **use_examples/Llamaindex_LangChain.ipynb** Python Notebook for RAG task.
 - **use_examples/Topic_Modeling_with_Llama3.ipynb** Python Notebook for Topic Modleing.
 - **use_examples/SeqRecSys_LLM_Zero_Shot.ipynb** Python Notebook for Sequential Recommender Systems.
-- **use_examples/User Interface.ipynb** Python Notebook for inference through Visual Interface.
+- **use_examples/User Interface.ipynb** Python Notebook for inference through Visual Interface.<br><br>
+
 - **requirements.txt** List of project dependencies.
 
 <hr>
