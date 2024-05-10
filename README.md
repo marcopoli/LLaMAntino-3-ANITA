@@ -17,6 +17,11 @@ wants to provide Italian NLP researchers with an improved model the for Italian 
 
 <img src="https://github.com/marcopoli/LLaMAntino-3-ANITA/assets/25221576/dd261ecf-88c5-487e-8cd3-cbe7fb7ed1fe" width="200"> <br>[https://huggingface.co/swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA](https://huggingface.co/swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA) <br>
 
+| Model | HF   | GGUF   | EXL2   |
+|-------|-------|-------|-------|
+| *swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA* | [Link](https://huggingface.co/swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA) | [Link](https://huggingface.co/swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA_GGUF) | [Link](https://huggingface.co/swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA_EXL2) |
+
+
 <hr>
 
 ## Repo Structure
