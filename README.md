@@ -189,50 +189,24 @@ For direct use with `transformers`, you can easily get started with the followin
 
   ```
 
-### Unsloth
+<hr>
+  
+## Evaluation
 
-For direct use with `unsloth`, you can easily get started with the following steps.
+**Open LLM Leaderboard:**
 
-- Firstly, you need to install unsloth via the command below with `pip`.
-  ```bash
-  pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
-  pip install --no-deps xformers trl peft accelerate bitsandbytes
-  ```
+Evaluated with lm-evaluation-benchmark-harness for the [**Open Italian LLMs Leaderboard**](https://huggingface.co/spaces/FinancialSupport/open_ita_llm_leaderboard)
+```
+   lm_eval --model hf --model_args pretrained=HUGGINGFACE_MODEL_ID  --tasks hellaswag_it,arc_it  --device cuda:0 --batch_size auto:2
+   lm_eval --model hf --model_args pretrained=HUGGINGFACE_MODEL_ID  --tasks m_mmlu_it --num_fewshot 5  --device cuda:0 --batch_size auto:2 
+```
 
-- Initialize and optimize the model before use.
-  ```python
-  from unsloth import FastLanguageModel
-  import torch
-
-  base_model = "m-polignano-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA"
-  model, tokenizer = FastLanguageModel.from_pretrained(
-      model_name = base_model,
-      max_seq_length = 8192,
-      dtype = None,
-      load_in_4bit = True, # Change to `False` if you don't want to use 4bit quantization.
-  )
-  FastLanguageModel.for_inference(model)
-  ```
-
-- Right now, you can start using the model directly.
-  ```python
-  sys = "Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA " \
-        "(Advanced Natural-based interaction for the ITAlian language)." \
-        " Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo."
-    
-  messages = [
-      {"role": "system", "content": sys},
-      {"role": "user", "content": "Chi è Carlo Magno?"}
-  ]
-  prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-  inputs = tokenizer(prompt, return_tensors="pt", add_special_tokens=False)
-  for k,v in inputs.items():
-      inputs[k] = v.cuda()
-  outputs = model.generate(**inputs, max_new_tokens=512, do_sample=True, top_p=0.9, temperature=0.6)
-  results = tokenizer.batch_decode(outputs)[0]
-  print(results)
-  ```
-
+| Metric                | Value                     |
+|-----------------------|---------------------------|
+| Avg.                  | **0.6160**  |
+| Arc_IT         | 0.5714 |
+| Hellaswag_IT    | 0.7093 |
+| MMLU_IT          | 0.5672 |
 
 
 <hr>
