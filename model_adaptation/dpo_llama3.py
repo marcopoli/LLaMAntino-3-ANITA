@@ -14,7 +14,7 @@ from peft import LoraConfig, PeftModel
 max_seq_length = 8192
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
 load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
-model_name = "Meta-Llama-3-8B-Instruct"
+model_name = "swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA"
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = model_name,
@@ -106,7 +106,7 @@ dpo_trainer = DPOTrainer(
 dpo_trainer.train()
 
 ### SAVE the NEW MODEL ###
-new_model = model_name+"_adapters"
+new_model = model_name+"_DPO_adapters"
 dpo_trainer.save_model(new_model)
 
 # Reload model in FP16 and merge it with LoRA weights
@@ -115,7 +115,7 @@ base_model = AutoModelForCausalLM.from_pretrained(
     low_cpu_mem_usage=True,
     return_dict=True,
     torch_dtype=torch.bfloat16,
-    device_map="balanced"
+    device_map="auto"
 )
 model = PeftModel.from_pretrained(base_model, new_model)
 model = model.merge_and_unload()
