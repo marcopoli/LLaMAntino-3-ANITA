@@ -15,7 +15,7 @@ wants to provide Italian NLP researchers with an improved model the for Italian 
 ## Model Details
 *Last Update: 10/05/2024*<br>
 
-<img src="https://static.vecteezy.com/system/resources/previews/016/833/880/large_2x/github-logo-git-hub-icon-with-text-on-white-background-free-vector.jpg" width="200"> [https://github.com/marcopoli/LLaMAntino-3-ANITA](https://github.com/marcopoli/LLaMAntino-3-ANITA)<br>
+<img src="https://github.com/marcopoli/LLaMAntino-3-ANITA/assets/25221576/dd261ecf-88c5-487e-8cd3-cbe7fb7ed1fe" width="200"> <br>[https://huggingface.co/m-polignano-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA](https://huggingface.co/m-polignano-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA) <br>
 
 <hr>
 
