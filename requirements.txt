@@ -137,7 +137,7 @@ typepy==1.3.2
 typing_extensions==4.11.0
 tyro==0.8.3
 tzdata==2024.1
-unsloth @ git+https://github.com/unslothai/unsloth.git@88eee5026716a81e8f42a20fa83cae24eb35e45e
+unsloth @ git+https://github.com/unslothai/unsloth.git@4211cc01409e3ced4f7abebaf68e244193b46e2c
 urllib3==2.2.1
 wcwidth==0.2.13
 word2number==1.1
