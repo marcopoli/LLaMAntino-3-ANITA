@@ -13,7 +13,7 @@ from peft import LoraConfig, PeftModel
 max_seq_length = 8192 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
 load_in_4bit = False # Use 4bit quantization to reduce memory usage. Can be False.
-model_name = "Meta-Llama-3-8B-Instruct"
+model_name = "swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA"
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = model_name,
@@ -67,7 +67,7 @@ def formatting_prompts_func(examples):
 
 llama3_template= """<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-You are an intelligent assistant named LLaMAntino-3 ANITA (Advanced Natural-based interaction for the ITAlian language) kind and respectful.Answer in the language used for the question in a clear, simple and comprehensive manner. <|eot_id|> <|start_header_id|>user<|end_header_id|>
+Sei un an assistente AI per la lingua Italiana di nome LLaMAntino-3 ANITA (Advanced Natural-based interaction for the ITAlian language). Rispondi nella lingua usata per la domanda in modo chiaro, semplice ed esaustivo. <|eot_id|> <|start_header_id|>user<|end_header_id|>
 
 {} <|eot_id|> <|start_header_id|>assistant<|end_header_id|>
 
@@ -116,7 +116,7 @@ trainer = SFTTrainer(
 )
 
 trainer_stats = trainer.train()
-new_model = model_name+"_adapters"
+new_model = model_name+"_SFT_adapters"
 
 trainer.model.save_pretrained(new_model)
 # Reload model in FP16 and merge it with LoRA weights
