@@ -39,7 +39,7 @@ To use the model directly, there are many ways to get started, choose one of the
 ```
 <|start_header_id|>system<|end_header_id|>
 
-<|eot_id|>{ SYS Prompt }<|start_header_id|>user<|end_header_id|>
+{ SYS Prompt }<|eot_id|><|start_header_id|>user<|end_header_id|>
 
 { USER Prompt }<|eot_id|>{{ end }}<|start_header_id|>assistant<|end_header_id|>
 
