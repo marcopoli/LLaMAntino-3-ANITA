@@ -15,7 +15,7 @@ wants to provide Italian NLP researchers with an improved model the for Italian 
 ## Model Details
 *Last Update: 10/05/2024*<br>
 
-<img src="https://github.com/marcopoli/LLaMAntino-3-ANITA/assets/25221576/dd261ecf-88c5-487e-8cd3-cbe7fb7ed1fe" width="200"> <br>[https://huggingface.co/m-polignano-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA](https://huggingface.co/m-polignano-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA) <br>
+<img src="https://github.com/marcopoli/LLaMAntino-3-ANITA/assets/25221576/dd261ecf-88c5-487e-8cd3-cbe7fb7ed1fe" width="200"> <br>[https://huggingface.co/swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA](https://huggingface.co/swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA) <br>
 
 <hr>
 
@@ -83,7 +83,7 @@ For direct use with `transformers`, you can easily get started with the followin
       AutoTokenizer,
   )
 
-  base_model = "m-polignano-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA"
+  base_model = "swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA"
   model = AutoModelForCausalLM.from_pretrained(
       base_model,
       torch_dtype=torch.bfloat16,
@@ -138,7 +138,7 @@ For direct use with `transformers`, you can easily get started with the followin
       BitsAndBytesConfig,
   )
 
-  base_model = "m-polignano-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA"
+  base_model = "swap-uniba/LLaMAntino-3-ANITA-8B-Inst-DPO-ITA"
   bnb_config = BitsAndBytesConfig(
       load_in_4bit=True,
       bnb_4bit_quant_type="nf4",
