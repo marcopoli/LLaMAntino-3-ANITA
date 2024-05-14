@@ -47,7 +47,7 @@ wants to provide Italian NLP researchers with an improved model for the Italian 
 ## Specifications
 
 - **Model developers**: <br><a href="https://marcopoli.github.io/">Ph.D. Marco Polignano</a> - University of Bari Aldo Moro, Italy <br> <a href="https://huggingface.co/swap-uniba">SWAP Research Group</a> <br>
-- **Variations**: The model release has been **supervised fine-tuning (SFT)** using **QLoRA** 4bit, on two instruction-based datasets. **DPO** approach over the *jondurbin/truthy-dpo-v0.1* dataset is used to align with human preferences for helpfulness and safety.
+- **Variations**: The model release has been **supervised fine-tuning (SFT)** using **QLoRA** 4bit, on two instruction-based datasets. **DPO** approach over the *mlabonne/orpo-dpo-mix-40k* dataset is used to align with human preferences for helpfulness and safety.
 - **Input**: Models input text only.
 - **Language**: Multilingual🏁 + Italian 🇮🇹
 - **Output**: Models generate text and code only.
