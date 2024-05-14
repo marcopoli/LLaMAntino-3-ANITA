@@ -8,7 +8,8 @@ This model version aims to be the a <b>Multilingual Model</b> 🏁 -- EN 🇺�
 
 
 The 🌟**ANITA project**🌟 *(**A**dvanced **N**atural-based interaction for the **ITA**lian language)*
-wants to provide Italian NLP researchers with an improved model the for Italian Language 🇮🇹 use cases.
+wants to provide Italian NLP researchers with an improved model for the Italian Language 🇮🇹 use cases.
+
 
 <hr>
 
