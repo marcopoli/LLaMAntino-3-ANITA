@@ -225,6 +225,17 @@ Evaluated with lm-evaluation-benchmark-harness for the [**Open Italian LLMs Lead
 
 ## Citation instructions
 ```bibtex
+@misc{polignano2024advanced,
+      title={Advanced Natural-based interaction for the ITAlian language: LLaMAntino-3-ANITA}, 
+      author={Marco Polignano and Pierpaolo Basile and Giovanni Semeraro},
+      year={2024},
+      eprint={2405.07101},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+
+```bibtex
 @misc{basile2023llamantino,
       title={LLaMAntino: LLaMA 2 Models for Effective Text Generation in Italian Language}, 
       author={Pierpaolo Basile and Elio Musacchio and Marco Polignano and Lucia Siciliani and Giuseppe Fiameni and Giovanni Semeraro},
